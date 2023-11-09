@@ -13,20 +13,18 @@
             <h1>Etch-a-Sketch</h1>
         </div>
         <div class="content">
-            <div>
-                <input type="text" placeholder="Size of Sketchpad" value="16" onchange="changeSize(this.value)">
-                <button>Change Sketchpad Size</button>
-                </div>
-                <div class="buttons">
-                    <button onclick="changeColor('black')">Black</button>
-                    <button onclick="changeColor('white')">Eraser</button>
-                    <button onclick="changeColor('random')">Rainbow Streak</button>
-                    <button id="reset" onClick="resetPad()">Reset Pad</button>
-                </div>    
             <div class="pad">
             </div>
-            <div class="footer">
+            <div class="buttons">
+                <button id="black" onclick="changeColor('black')">Black Pencil</button>
+                <button id="eraser" onclick="changeColor('white')">Eraser</button>
+                <button id="rainbow" onclick="changeColor('random')">Rainbow Pencil</button>
             </div>
+            <div class="footer">
+                <input id="userInput" type="text" placeholder="Pixels" value="16">
+                <button id="sizeButton" onclick="changeSize('userInput')">Change Pixels</button>
+                <button id="reset" onClick="resetPad()">Clear</button>
+            </div>  
         </div>
     </div>
     <script src="sketch.js"></script>

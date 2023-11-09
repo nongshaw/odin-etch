@@ -24,6 +24,7 @@ createPad(16);
 
 // Enable user to change size of sketchpad
 function changeSize(input) {
+    var input = document.getElementById("userInput").value;
     if(input >=2 && input <=100) {
         createPad(input);
     } else {
